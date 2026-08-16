@@ -1,0 +1,13 @@
+{
+  "folders": [
+    { "name": "Anantah Shell", "path": "anantah-shell" },
+    { "name": "Anantah Auth MFE", "path": "anantah-auth-mfe" },
+    { "name": "Anantah Core MFE", "path": "anantah-core-mfe" },
+    { "name": "Anantah Space Fashion MFE", "path": "anantah-fashion-mfe" },
+    { "name": "Anantah Space Intelligence MFE", "path": "anantah-space-intelligence-mfe" },
+    { "name": "Anantah Space Play MFE", "path": "anantah-space-play-mfe" }
+  ],
+  "settings": {
+    "typescript.tsdk": "node_modules/typescript/lib"
+  }
+}

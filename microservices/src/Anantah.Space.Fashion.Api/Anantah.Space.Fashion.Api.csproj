@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="10.0.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="10.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.OpenApi" Version="2.11.0" />
+    <PackageReference Include="System.Security.Cryptography.Xml" Version="9.0.18" PrivateAssets="all" NoWarn="NU1510" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Anantah.Space.Fashion.Application\Anantah.Space.Fashion.Application.csproj" />
+    <ProjectReference Include="..\Anantah.Space.Fashion.Contracts\Anantah.Space.Fashion.Contracts.csproj" />
+    <ProjectReference Include="..\Anantah.Space.Fashion.Infrastructure\Anantah.Space.Fashion.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>

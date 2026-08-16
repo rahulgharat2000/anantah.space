@@ -1,0 +1,13 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/Anantah.Space.Fashion.Api/Anantah.Space.Fashion.Api.csproj" />
+    <Project Path="src/Anantah.Space.Fashion.Application/Anantah.Space.Fashion.Application.csproj" />
+    <Project Path="src/Anantah.Space.Fashion.Contracts/Anantah.Space.Fashion.Contracts.csproj" />
+    <Project Path="src/Anantah.Space.Fashion.Domain/Anantah.Space.Fashion.Domain.csproj" />
+    <Project Path="src/Anantah.Space.Fashion.Infrastructure/Anantah.Space.Fashion.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/Anantah.Space.Fashion.ArchitectureTests/Anantah.Space.Fashion.ArchitectureTests.csproj" />
+    <Project Path="tests/Anantah.Space.Fashion.UnitTests/Anantah.Space.Fashion.UnitTests.csproj" />
+  </Folder>
+</Solution>

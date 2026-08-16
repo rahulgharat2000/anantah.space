@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap");
+
+:root { color: #172039; background: #fff; font-family: "Manrope", sans-serif; font-synthesis: none; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; }
+button { font: inherit; cursor: pointer; }
+a { color: inherit; text-decoration: none; }
+
+.play-page { min-height: 100vh; background: #fff; }
+.play-header {
+  display: grid;
+  min-height: 72px;
+  grid-template-columns: auto 1fr auto;
+  gap: 24px;
+  align-items: center;
+  padding: 12px clamp(18px, 5vw, 72px);
+  color: #fff;
+  background: #081936;
+}
+.play-brand { display: flex; align-items: center; gap: 10px; }
+.play-brand > span { display: grid; width: 38px; height: 38px; place-items: center; border: 1px solid #8ba2c8; border-radius: 50%; font-family: "Barlow Condensed", sans-serif; font-size: 22px; }
+.play-brand strong, .play-brand small { display: block; }
+.play-brand strong { font-size: 12px; letter-spacing: 0.12em; }
+.play-brand small { color: #89a2cc; font-size: 9px; letter-spacing: 0.1em; }
+.play-header nav { display: flex; justify-content: center; gap: 28px; font-size: 12px; font-weight: 600; }
+.play-header > button { width: 34px; height: 34px; border: 1px solid #5b7197; border-radius: 50%; color: #fff; background: #173a72; font-size: 11px; font-weight: 700; }
+
+.play-hero { position: relative; display: flex; min-height: clamp(420px, 68vh, 680px); align-items: flex-end; overflow: hidden; padding: 64px clamp(20px, 7vw, 110px); color: #fff; background: #07142d; }
+.play-hero > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.play-hero__shade { position: absolute; inset: 0; background: linear-gradient(90deg, rgb(3 11 27 / 96%) 0%, rgb(5 16 37 / 76%) 45%, rgb(5 15 33 / 18%) 100%); }
+.play-hero__content { position: relative; width: min(660px, 100%); }
+.play-hero__content > p, .game-library header p, .play-community p { margin: 0; color: #79a7ed; font-size: 10px; font-weight: 700; letter-spacing: 0.16em; }
+.play-hero h1 { margin: 8px 0 14px; font-family: "Barlow Condensed", sans-serif; font-size: clamp(58px, 10vw, 116px); font-weight: 600; line-height: 0.85; text-transform: uppercase; }
+.play-hero__content > span { display: block; max-width: 550px; color: rgb(255 255 255 / 77%); line-height: 1.7; }
+.play-hero__content > div { display: flex; flex-wrap: wrap; gap: 18px; align-items: center; margin-top: 26px; }
+.play-hero__content button { border: 0; border-radius: 4px; padding: 12px 18px; color: #0b1b37; background: #fff; font-size: 12px; font-weight: 700; }
+.play-hero__content small { color: #aebdd5; }
+
+.game-library { padding: 68px clamp(18px, 5vw, 72px) 88px; }
+.game-library > header { display: flex; align-items: end; justify-content: space-between; gap: 20px; border-top: 1px solid #dfe4ec; padding-top: 20px; }
+.game-library h2, .play-community h2 { margin: 8px 0 0; font-family: "Barlow Condensed", sans-serif; font-size: clamp(38px, 6vw, 64px); font-weight: 600; line-height: 0.95; text-transform: uppercase; }
+.game-library > header > span { color: #737e91; font-size: 12px; }
+.game-filters { display: flex; flex-wrap: wrap; gap: 8px; margin: 30px 0 24px; }
+.game-filters button { border: 1px solid #dce2eb; border-radius: 4px; padding: 8px 12px; color: #536076; background: #fff; font-size: 11px; font-weight: 700; }
+.game-filters button.active { border-color: #102d5f; color: #fff; background: #102d5f; }
+.play-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.play-grid article { overflow: hidden; border: 1px solid #e0e5ec; border-radius: 6px; background: #fff; transition: transform 180ms ease, box-shadow 180ms ease; }
+.play-grid article:hover { transform: translateY(-4px); box-shadow: 0 18px 34px rgb(15 32 63 / 10%); }
+.game-card__media { position: relative; aspect-ratio: 16 / 10; overflow: hidden; background: #07152f; }
+.game-card__media img { width: 100%; height: 100%; object-fit: cover; transition: transform 500ms ease; }
+.play-grid article:hover .game-card__media img { transform: scale(1.04); }
+.game-card__media span { position: absolute; top: 12px; left: 12px; border-radius: 3px; padding: 5px 8px; color: #fff; background: rgb(5 17 40 / 82%); font-size: 9px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; }
+.game-card__body { padding: 18px; }
+.game-card__body h3 { margin: 0; font-family: "Barlow Condensed", sans-serif; font-size: 27px; font-weight: 600; text-transform: uppercase; }
+.game-card__body > p { margin: 5px 0 18px; color: #7a8494; font-size: 12px; }
+.game-card__body > div { display: flex; align-items: center; justify-content: space-between; border-top: 1px solid #e6e9ef; padding-top: 12px; color: #606c80; font-size: 11px; }
+.game-card__body button { display: grid; width: 30px; height: 30px; place-items: center; border: 0; border-radius: 50%; color: #fff; background: #102d5f; }
+
+.play-community { display: grid; grid-template-columns: 1fr minmax(280px, 480px); gap: 48px; align-items: end; padding: 68px clamp(18px, 5vw, 72px); color: #fff; background: #0a1b3b; }
+.play-community > span { color: #aebcd4; line-height: 1.7; }
+.play-footer { display: flex; justify-content: space-between; gap: 18px; padding: 22px clamp(18px, 5vw, 72px); color: #899dbf; background: #06142d; font-size: 10px; letter-spacing: 0.08em; }
+
+.game-loading { display: grid; min-height: 100vh; place-items: center; color: #b8c9e4; background: #07142d; font-family: "Barlow Condensed", sans-serif; font-size: 24px; font-weight: 600; text-transform: uppercase; }
+
+.dragon-game { min-height: 100vh; padding: clamp(18px, 4vw, 52px); color: #f4f8ff; background: radial-gradient(circle at 75% 10%, #16315c 0, #081936 38%, #040d20 100%); }
+.dragon-game__header { display: grid; width: min(1100px, 100%); grid-template-columns: 48px 1fr auto; gap: 18px; align-items: center; margin: 0 auto 20px; }
+.dragon-game__header > button { width: 44px; height: 44px; border: 1px solid #536f9d; border-radius: 50%; color: #fff; background: #0c2348; font-size: 22px; }
+.dragon-game__header p { margin: 0 0 3px; color: #79a7ed; font-size: 9px; font-weight: 700; letter-spacing: 0.14em; }
+.dragon-game__header h1 { margin: 0; font-family: "Barlow Condensed", sans-serif; font-size: clamp(34px, 5vw, 58px); font-weight: 600; line-height: 0.9; text-transform: uppercase; }
+.dragon-game__score { display: flex; gap: 16px; color: #9eb3d4; font-size: 12px; font-weight: 700; }
+.dragon-game__stage { width: min(1100px, 100%); aspect-ratio: 16 / 9; overflow: hidden; margin: auto; border: 1px solid #36537f; border-radius: 6px; background: #07142d; box-shadow: 0 28px 70px rgb(0 0 0 / 32%); }
+.dragon-game__stage canvas { display: block; width: 100% !important; height: 100% !important; }
+.dragon-game__controls { display: flex; width: min(1100px, 100%); align-items: center; justify-content: space-between; gap: 24px; margin: 18px auto 0; }
+.dragon-game__controls p { margin: 0; color: #9fb1ce; font-size: 13px; }
+.dragon-game__controls > div { display: flex; align-items: center; gap: 18px; }
+.dragon-game__controls span { color: #8399bc; font-size: 11px; white-space: nowrap; }
+.dragon-game__controls kbd { border: 1px solid #536c93; border-bottom-width: 2px; border-radius: 3px; padding: 3px 6px; color: #dce8fa; background: #10264a; font-family: "Manrope", sans-serif; }
+.dragon-game__controls button { min-width: 112px; border: 0; border-radius: 4px; padding: 12px 20px; color: #06251f; background: #6ee7b7; font-size: 12px; font-weight: 800; text-transform: uppercase; }
+
+@media (max-width: 900px) {
+  .play-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .play-community { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 620px) {
+  .play-header { grid-template-columns: 1fr auto; }
+  .play-header nav { display: none; }
+  .play-hero { min-height: 520px; }
+  .play-grid { grid-template-columns: 1fr; }
+  .game-library > header { align-items: start; flex-direction: column; }
+  .play-footer { flex-direction: column; }
+  .dragon-game { padding: 14px; }
+  .dragon-game__header { grid-template-columns: 42px 1fr; }
+  .dragon-game__score { display: none; }
+  .dragon-game__controls { align-items: stretch; flex-direction: column; gap: 12px; }
+  .dragon-game__controls > div { justify-content: space-between; }
+}

@@ -1,0 +1,56 @@
+name: anantah-fashion
+
+services:
+  postgres:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_DB: anantah_fashion_commerce
+      POSTGRES_USER: anantah_fashion_app
+      POSTGRES_PASSWORD: ${FASHION_POSTGRES_PASSWORD:-local-fashion-only}
+    ports:
+      - "5433:5432"
+    volumes:
+      - anantah_fashion_postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U anantah_fashion_app -d anantah_fashion_commerce"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  redis:
+    image: redis:7-alpine
+    command: redis-server --appendonly yes
+    ports:
+      - "6380:6379"
+    volumes:
+      - anantah_fashion_redis_data:/data
+
+  opensearch:
+    image: opensearchproject/opensearch:3
+    environment:
+      discovery.type: single-node
+      plugins.security.disabled: "true"
+      OPENSEARCH_JAVA_OPTS: -Xms512m -Xmx512m
+    ports:
+      - "9201:9200"
+      - "9601:9600"
+    volumes:
+      - anantah_fashion_search_data:/usr/share/opensearch/data
+
+  minio:
+    image: minio/minio:latest
+    command: server /data --console-address ":9001"
+    environment:
+      MINIO_ROOT_USER: ${FASHION_STORAGE_USER:-anantah_fashion}
+      MINIO_ROOT_PASSWORD: ${FASHION_STORAGE_PASSWORD:-local-fashion-storage}
+    ports:
+      - "9002:9000"
+      - "9003:9001"
+    volumes:
+      - anantah_fashion_media_data:/data
+
+volumes:
+  anantah_fashion_postgres_data:
+  anantah_fashion_redis_data:
+  anantah_fashion_search_data:
+  anantah_fashion_media_data:

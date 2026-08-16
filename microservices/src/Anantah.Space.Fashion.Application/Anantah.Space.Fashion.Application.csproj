@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Anantah.Space.Fashion.Contracts\Anantah.Space.Fashion.Contracts.csproj" />
+    <ProjectReference Include="..\Anantah.Space.Fashion.Domain\Anantah.Space.Fashion.Domain.csproj" />
+  </ItemGroup>
+</Project>

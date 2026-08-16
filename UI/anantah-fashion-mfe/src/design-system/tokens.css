@@ -1,0 +1,37 @@
+:root {
+  --fashion-color-ink: #17191d;
+  --fashion-color-ink-subtle: #515761;
+  --fashion-color-canvas: #f7f7f4;
+  --fashion-color-surface: #ffffff;
+  --fashion-color-surface-raised: #fcfcfa;
+  --fashion-color-border: #dfe1e5;
+  --fashion-color-border-strong: #b8bdc5;
+  --fashion-color-brand: #1748c7;
+  --fashion-color-brand-hover: #10389f;
+  --fashion-color-accent: #e24a2a;
+  --fashion-color-success: #176b45;
+  --fashion-color-success-surface: #eaf6ef;
+  --fashion-color-danger: #a32323;
+  --fashion-color-danger-surface: #fff4f2;
+  --fashion-color-focus: #2f6fed;
+  --fashion-font-body: "Manrope", sans-serif;
+  --fashion-font-display: "Space Grotesk", sans-serif;
+  --fashion-text-xs: 0.75rem;
+  --fashion-text-sm: 0.8125rem;
+  --fashion-text-md: 0.9375rem;
+  --fashion-text-lg: 1.125rem;
+  --fashion-space-1: 0.25rem;
+  --fashion-space-2: 0.5rem;
+  --fashion-space-3: 0.75rem;
+  --fashion-space-4: 1rem;
+  --fashion-space-5: 1.5rem;
+  --fashion-space-6: 2rem;
+  --fashion-space-7: 3rem;
+  --fashion-radius-sm: 4px;
+  --fashion-radius-md: 8px;
+  --fashion-radius-pill: 999px;
+  --fashion-shadow-raised: 0 16px 32px rgb(23 25 29 / 10%);
+  --fashion-control-height-sm: 2rem;
+  --fashion-control-height-md: 2.5rem;
+  --fashion-content-max: 90rem;
+}

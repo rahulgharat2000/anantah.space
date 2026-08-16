@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-labelledby="title description">
+  <title id="title">Dragon Jump</title>
+  <description id="description">A luminous teal dragon jumping above crystal obstacles in deep space.</description>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07142d"/>
+      <stop offset="0.55" stop-color="#102d5f"/>
+      <stop offset="1" stop-color="#061126"/>
+    </linearGradient>
+    <linearGradient id="dragon" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#9ff8d8"/>
+      <stop offset="1" stop-color="#2dd4bf"/>
+    </linearGradient>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="14" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="1200" height="720" fill="url(#sky)"/>
+  <g fill="#b8d4ff">
+    <circle cx="112" cy="118" r="3" opacity=".75"/><circle cx="218" cy="204" r="2" opacity=".5"/>
+    <circle cx="340" cy="92" r="4" opacity=".65"/><circle cx="471" cy="171" r="2" opacity=".75"/>
+    <circle cx="648" cy="78" r="3" opacity=".5"/><circle cx="760" cy="151" r="2" opacity=".8"/>
+    <circle cx="926" cy="88" r="4" opacity=".6"/><circle cx="1080" cy="184" r="2" opacity=".8"/>
+    <circle cx="1042" cy="330" r="3" opacity=".45"/><circle cx="170" cy="362" r="2" opacity=".65"/>
+  </g>
+  <path d="M115 560H1085" stroke="#6385b6" stroke-width="4" opacity=".55"/>
+  <path d="M445 535l35-78 34 78zm53 0l42-112 45 112zm66 0l29-67 36 67z" fill="#6ee7b7" filter="url(#glow)" opacity=".9"/>
+  <g filter="url(#glow)">
+    <path d="M424 349c-65-70-144-55-188-12 39-9 74 9 96 42-42-4-72 17-88 48 50-20 90-8 121 24 16-24 34-52 59-102z" fill="#238c9f"/>
+    <path d="M421 365c18-93 86-163 174-170-38 35-55 76-50 121 46-58 112-78 180-54-45 14-81 42-101 83 53-20 103-12 146 24-70-4-123 19-166 68-34 40-86 59-137 42-61-19-82-70-46-114z" fill="url(#dragon)"/>
+    <path d="M645 339c66-27 126-13 170 35l-61 4 35 43-88-21-38 49-21-69z" fill="#56d9c7"/>
+    <path d="M724 327l34-56 16 66zm-197-112 31-59 13 70zm-59 30 4-68 29 57z" fill="#a4ffe1"/>
+    <path d="M432 451c-73 10-121 53-139 116 46-39 97-50 151-33 29 10 54-3 77-34z" fill="#2dd4bf"/>
+    <circle cx="675" cy="342" r="10" fill="#07142d"/>
+    <circle cx="678" cy="339" r="3" fill="#f2fffb"/>
+  </g>
+  <path d="M328 477c77-124 199-198 344-202" fill="none" stroke="#84f3d0" stroke-width="5" stroke-dasharray="14 18" opacity=".35"/>
+</svg>

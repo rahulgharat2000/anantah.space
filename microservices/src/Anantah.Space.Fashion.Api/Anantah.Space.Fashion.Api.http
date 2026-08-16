@@ -1,0 +1,6 @@
+@Anantah.Space.Fashion.Api_HostAddress = http://localhost:5134
+
+GET {{Anantah.Space.Fashion.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
